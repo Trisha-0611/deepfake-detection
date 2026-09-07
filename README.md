@@ -42,12 +42,12 @@ deepfake detection/
 │
 ├── test_video.py          ← Stage 1: Inspect a single video file
 ├── preprocess.py          ← Stage 1: Extract frames + crop faces
-├── train_spatial.py       ← Stage 2: Train spatial CNN (TODO)
-├── frequency_cue.py       ← Stage 3: Frequency-domain analysis (TODO)
-├── temporal_cue.py        ← Stage 3: Temporal modelling (TODO)
-├── fusion.py              ← Stage 4: Multi-cue fusion (TODO)
-├── detector.py            ← Stage 5: Inference wrapper (TODO)
-├── app.py                 ← Stage 6: Web demo (TODO)
+├── train_spatial.py       ← Stage 2: Spatial CNN  ✅ Done (97.5% val accuracy)
+├── frequency_cue.py       ← Stage 3A: Frequency analysis  ✅ Done (67.5% val accuracy)
+├── temporal_cue.py        ← Stage 3B: Temporal modelling  ✅ Done (100% val accuracy)
+├── fusion.py              ← Stage 4: Multi-cue fusion  ✅ Done (95% val accuracy)
+├── detector.py            ← Stage 5: Inference wrapper  ✅ Done
+├── app.py                 ← Stage 6: Web demo  ✅ Done (deployed on Streamlit Cloud)
 └── requirements.txt
 ```
 
@@ -191,12 +191,12 @@ python preprocess.py --fps 5
 
 ## Roadmap
 
-| Stage | Status | Description |
-|-------|--------|-------------|
-| 1 | ✅ Done | Project setup, frame extraction, face cropping |
-| 2 | 🔲 TODO | Spatial CNN (EfficientNet / Xception) training |
-| 3 | 🔲 TODO | Frequency cue (DCT / FFT features) |
-| 3 | 🔲 TODO | Temporal cue (LSTM / 3D-CNN) |
-| 4 | 🔲 TODO | Multi-cue fusion module |
-| 5 | 🔲 TODO | Inference wrapper (`detector.py`) |
-| 6 | 🔲 TODO | Web demo (`app.py`) |
+| Stage | Status | Description | Result |
+|-------|--------|-------------|--------|
+| 1 | ✅ Done | Project setup, frame extraction, face cropping | — |
+| 2 | ✅ Done | Spatial CNN — EfficientNetB0 | **97.5% val accuracy** |
+| 3A | ✅ Done | Frequency cue — FFT + MobileNetV2 | **67.5% val accuracy** |
+| 3B | ✅ Done | Temporal cue — BiLSTM | **100% val accuracy** |
+| 4 | ✅ Done | Multi-cue fusion — Meta-Learner MLP | **95% val accuracy** |
+| 5 | ✅ Done | Inference wrapper — `detector.py` | Images + Videos |
+| 6 | ✅ Done | Web demo — `app.py` deployed on Streamlit Cloud | Live 🚀 |
