@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# Dataset — too large for GitHub
+dataset/faces/
+dataset/raw/
+dataset/temporal_features/
+
+# Trained models — too large for GitHub (use Git LFS or upload separately)
+models/*.keras
+models/*.h5
+
+# Keep training logs
+!models/*.csv
+!models/.gitkeep
+
+# Streamlit cache
+.streamlit/cache/
+
+# Temp files
+*.tmp
+*.log
+tmp/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
