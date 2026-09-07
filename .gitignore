@@ -18,8 +18,8 @@ dataset/faces/
 dataset/raw/
 dataset/temporal_features/
 
-# Trained models — too large for GitHub (use Git LFS or upload separately)
-models/*.keras
+# Model weights — included (all under 30 MB, within GitHub 100 MB limit)
+# models/*.keras  ← intentionally tracked
 models/*.h5
 
 # Keep training logs

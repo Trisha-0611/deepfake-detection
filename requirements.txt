@@ -1,32 +1,20 @@
 # ============================================================
 #  Deep Learning Based Multi-Cue Deepfake Detection
-#  requirements.txt  –  All Stages (1 through 6)
-# ============================================================
-#
-# Target environment
-# ------------------
-#   Python  : 3.10.11
-#   NumPy   : 1.26.4   (DO NOT upgrade – TF 2.16.2 requires < 2.0)
-#   OpenCV  : 4.10.0
-#   TF      : 2.16.2
-#
+#  requirements.txt  –  Streamlit Cloud deployment
 # ============================================================
 
-# Core scientific stack – pinned to known-good versions
+# Core scientific stack
 numpy==1.26.4
 
-# Computer vision  –  frame extraction, Haar face detection, FFT visualisation
-opencv-python==4.10.0.84
+# Computer vision
+opencv-python-headless==4.10.0.84
 
-# Web demo  –  Streamlit is stable on Python 3.10 + NumPy 1.26.4
+# Deep learning
+tensorflow-cpu==2.16.2
+
+# Web demo
 streamlit>=1.28.0,<2.0
 
-# Progress bars (used in later-stage scripts)
+# Utilities
 tqdm>=4.66.0,<5.0
-
-# ============================================================
-# NOT listed here intentionally:
-#   tensorflow==2.16.2  – already in your environment.
-#                         Add this line only if recreating a
-#                         fresh virtual environment from scratch.
-# ============================================================
+pandas>=1.5.0,<3.0
