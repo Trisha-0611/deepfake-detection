@@ -43,3 +43,8 @@ tmp/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+dataset/fft_faces/
+dataset/frames/
+dataset/meta_features.npz
+dataset/
