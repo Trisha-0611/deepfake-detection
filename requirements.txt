@@ -1,20 +1,14 @@
-# ============================================================
-#  Deep Learning Based Multi-Cue Deepfake Detection
-#  requirements.txt  –  Streamlit Cloud deployment
-# ============================================================
-
-# Core scientific stack
-numpy==1.26.4
-
-# Computer vision
-opencv-python-headless==4.10.0.84
-
-# Deep learning
-tensorflow-cpu==2.16.2
-
-# Web demo
-streamlit>=1.28.0,<2.0
-
-# Utilities
-tqdm>=4.66.0,<5.0
-pandas>=1.5.0,<3.0
+# Inference / Streamlit deployment. On Colab install the same versions so the
+# saved .keras models load here (see README, "Training on Colab").
+numpy==2.5.4              # TF 2.20 + pyarrow (Streamlit charts) need NumPy 2
+opencv-contrib-python-headless==4.11.0.86   # the build retina-face depends on (one cv2 package only)
+tensorflow==2.20.0
+keras==3.13.2             # same versions as the Kaggle training run
+tf-keras==2.20.1          # required by retina-face on TensorFlow >= 2.16
+retina-face==0.0.19
+scikit-learn>=1.3,<2
+scipy>=1.11,<2
+pandas>=1.5,<3
+matplotlib>=3.7,<4
+streamlit>=1.60,<2          # tested with 1.60 (width="stretch", on_click="ignore")
+# mtcnn                   # only for the face-detector ablation (Table 7.5)
