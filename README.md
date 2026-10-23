@@ -17,6 +17,14 @@ Spatial, Frequency and Temporal Evidence with Faithful Cue-Level Attribution*.
 | `detector.py`, `app.py` | Chapter 6: command-line and Streamlit analysis of one file |
 | `test_explain.py` | Table 5.3, TC4–TC7 |
 
+## Branches
+
+| Branch | Contents |
+|---|---|
+| `main` | Current system (same as `multi-cue`) |
+| `multi-cue` | Explainable multi-cue detector described in the report |
+| `prototype` | Earlier prototype (Haar cascade, demo data), kept for reference |
+
 ## 1. Datasets
 
 All three are free for research but need an access request. Request them first; approval takes days.
